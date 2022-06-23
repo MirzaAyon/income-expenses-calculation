@@ -83,3 +83,10 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         saveButton.disabled = false;
     }
 })
+
+//event generate by save-button
+document.getElementById('save-button').addEventListener('click', function () {
+    const incomeBlance = getInputValue('inputIncome');
+    const saveInput = getInputValue('save');
+    const totalEnpense = parseFloat(getInnerText('total-expense'));
+    const blance = parseFloat(getInnerText('blance'));

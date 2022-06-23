@@ -62,3 +62,13 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const failError = element('blance-influence-message');
     // get save button element 
     const saveButton = document.getElementById('save-button');
+    // check total cost , negative value & NaN 
+    if ((totalCost > incomeBlance) || (incomeBlance == -1 || foodCost == -1 || rentCost == -1 || clothesCost == -1)) {
+        // error show 
+        failError.style.display = 'block';
+        // set total-expense & blance inner text 0
+        setInnerText('total-expense', 0);
+        setInnerText('blance', 0);
+        // save button disabled 
+        saveButton.disabled = true;
+    }

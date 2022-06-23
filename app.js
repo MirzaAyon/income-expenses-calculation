@@ -40,3 +40,25 @@ function setInnerText(setFieldId, setValue) {
 function getInnerText(getFieldId) {
     return document.getElementById(getFieldId).innerText;
 }
+// calculate saving 
+function savingCalculate(blance, saving) {
+    return (blance * saving) / 100;
+}
+
+
+// event generate by calculate-btn
+document.getElementById('calculate-btn').addEventListener('click', function () {
+    // get input value  from income , food , rent , clothes
+    const incomeBlance = getInputValue('inputIncome');
+    const foodCost = getInputValue('inputFood');
+    const rentCost = getInputValue('inputRent');
+    const clothesCost = getInputValue('inputClothes');
+    // document.getElementById('error-message').innerText = "Please Check ";
+    // add total cost 
+    const totalCost = addNumbers(foodCost, rentCost, clothesCost);
+    // calculate blance 
+    const blance = incomeBlance - totalCost;
+    // error message div element 
+    const failError = element('blance-influence-message');
+    // get save button element 
+    const saveButton = document.getElementById('save-button');

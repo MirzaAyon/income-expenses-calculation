@@ -32,3 +32,7 @@ function addNumbers(number) {
 function setInputValue(inputFieldId, value) {
     element(inputFieldId).value = value;
 }
+// set innerText 
+function setInnerText(setFieldId, setValue) {
+    document.getElementById(setFieldId).innerText = setValue;
+}

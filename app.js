@@ -27,3 +27,8 @@ function addNumbers(number) {
     }
     return result;
 }
+
+// set input value 
+function setInputValue(inputFieldId, value) {
+    element(inputFieldId).value = value;
+}

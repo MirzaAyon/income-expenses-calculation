@@ -96,3 +96,18 @@ document.getElementById('save-button').addEventListener('click', function () {
     const remainingBalance = incomeBlance - totalEnpense - saving;
     //error message div element 
     const failError = element('blance-influence-message');
+    if (saving > blance) {
+        document.getElementById('error-message').innerText = "Your Remaing balance less than saving amount.";
+        // error show 
+        failError.style.display = 'block';
+
+        setInnerText('saving-amount', ' ');
+        setInnerText('remaining-balance', ' ');
+    }
+    else {
+        setInnerText('saving-amount', saving);
+        setInnerText('remaining-balance', remainingBalance);
+
+    }
+})
+

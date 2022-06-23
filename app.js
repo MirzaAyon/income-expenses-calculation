@@ -36,3 +36,7 @@ function setInputValue(inputFieldId, value) {
 function setInnerText(setFieldId, setValue) {
     document.getElementById(setFieldId).innerText = setValue;
 }
+// get innerText 
+function getInnerText(getFieldId) {
+    return document.getElementById(getFieldId).innerText;
+}

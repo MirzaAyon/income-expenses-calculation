@@ -72,3 +72,14 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         // save button disabled 
         saveButton.disabled = true;
     }
+    else {
+        // set innertext for total-expense & blance 
+        setInnerText('total-expense', totalCost);
+        setInnerText('blance', blance);
+        // error hide 
+        failError.style.display = 'none';
+        document.getElementById('error-message').innerText = "Insufficient blance. please check your expenses.";
+        // save button enablle 
+        saveButton.disabled = false;
+    }
+})

@@ -94,3 +94,5 @@ document.getElementById('save-button').addEventListener('click', function () {
     const saving = savingCalculate(incomeBlance, saveInput);
     // calculate remainingBalance 
     const remainingBalance = incomeBlance - totalEnpense - saving;
+    //error message div element 
+    const failError = element('blance-influence-message');

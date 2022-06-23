@@ -19,3 +19,11 @@ function getInputValue(inputFieldId) {
 
     return parseFloat(inputValue);
 }
+// get sum values 
+function addNumbers(number) {
+    let result = 0;
+    for (const num of arguments) {
+        result += num;
+    }
+    return result;
+}

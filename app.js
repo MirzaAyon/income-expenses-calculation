@@ -92,3 +92,5 @@ document.getElementById('save-button').addEventListener('click', function () {
     const blance = parseFloat(getInnerText('blance'));
     // calculate saving 
     const saving = savingCalculate(incomeBlance, saveInput);
+    // calculate remainingBalance 
+    const remainingBalance = incomeBlance - totalEnpense - saving;
